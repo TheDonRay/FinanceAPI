@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
     res.json({ 
         Server: "Backend Server is successfully running"
     }); 
+});  
+
+app.listen(PORT, () => { 
+    console.log(`Server is successfully running on: http://localhost:${PORT}`); 
 }); 
 
 
