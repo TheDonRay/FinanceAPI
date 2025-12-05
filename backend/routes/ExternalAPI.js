@@ -1,10 +1,10 @@
-const express = require('express'); 
-const externalcall = express.Router(); 
+const express = require("express");
+const externalcall = express.Router();
 
-//for this route I will be using the yahoo finance api call  
-//TODO set this route as an async route 
-externalcall.get('/stockdata', (req, res) => { 
-    res.send('This route will retrieve stock data using yahoo finance api call.');
-}); 
+//for this route I will be using the yahoo finance api call
+//TODO set this route as an async route
+externalcall.get("/stockdata", (req, res) => {
+  res.send("This route will retrieve stock data using yahoo finance api call.");
+});
 
-module.exports = externalcall; 
+module.exports = externalcall;
