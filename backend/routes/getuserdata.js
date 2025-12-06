@@ -1,9 +1,14 @@
 const express = require("express");
 const getUserdata = express.Router();
 
-getUserdata.get("/:stock", (req, res) => {
-    const stock = req.params.stock;  
-    if (stock == 'BTC'){ 
-        console.log("Not a valid stock that is a bitcoin based stock"); 
-    }
-});
+
+getUserdata.post("/:value", (req, res) => {
+    const value = req.params.value;  
+    if (value > 1000){  
+        console.log('Value recieved in the backend'); 
+        console.log('you have good money'); 
+    } 
+    res.send(value); 
+}); 
+
+module.exports = getUserdata; 

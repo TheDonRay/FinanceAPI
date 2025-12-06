@@ -8,6 +8,7 @@ app.use(cors());
 
 //import routes
 const ExternalapiCall = require("./routes/ExternalAPI.js");
+const userData = require('./routes/getuserdata.js'); 
 
 // set up middleware here as such
 app.use(express.json());
@@ -15,7 +16,8 @@ app.use(express.json());
 const PORT = process.env.PORT;
 
 //call the routes here as such
-app.use("/api/", ExternalapiCall);
+app.use("/api/", ExternalapiCall); 
+app.use("/api/", userData); 
 
 //set up simple backend route here as such
 app.get("/", (req, res) => {
